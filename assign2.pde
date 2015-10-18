@@ -5,7 +5,6 @@ float speed=5;
 int bgx1, bgx2;
 int gameState;
 float blood=38.8;
-int crash=0;
 final int GAME_START=1, GAME_RUN=2,GAME_OVER=3;
 
 PImage bg1,bg2;
@@ -108,8 +107,8 @@ void draw() {
     }
     
     //blood upper bound 
-    if (blood>194){
-    blood=194;
+    if (blood>=194.0){
+    blood=194.0;
     }
     break;  
 
@@ -125,7 +124,6 @@ void draw() {
      f=floor(random(0,439));
      g=588;
      h=245;
-     crash=0;
      blood=38.8;
      break;
      }
@@ -135,7 +133,7 @@ void draw() {
   }
    
    //game over
-   if(blood<=0){
+   if((int)blood<=0){
    switch(gameState){
    case GAME_RUN:
    gameState=GAME_OVER;
