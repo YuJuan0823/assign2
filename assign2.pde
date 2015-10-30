@@ -67,18 +67,18 @@ void draw() {
     image(bg1,bgx1,0);
     image(bg2,bgx1-640,0);
     image(bg1,bgx1-1280,0);
-    //fighter & boundary detection
+    //fighter 
     if(g<0){
-    g=640;
-    }
-    if(g>640){
     g=0;
     }
-    if(h<0){
-    h=480;
+    if(g>589){
+    g=589;
     }
-    if(h>480){
+    if(h<0){
     h=0;
+    }
+    if(h>429){
+    h=429;
     }
     image(img3,g,h);
     
